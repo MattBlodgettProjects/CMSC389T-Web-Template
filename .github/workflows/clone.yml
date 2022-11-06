@@ -7,12 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: testing
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{secrets.HOST}}
-        username: ${{secrets.USERNAME}}
-        password: ${{secrets.PORT}}
-        port: ${{secrets.PORT}}
-        script: | 
-          cd /pub/${{secrets.USERNAME}}
-          git clone https://github.com/MattBlodgettProjects/CMSC389T-Web-Template.git
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PORT}}
+          port: ${{secrets.PORT}}
+          script: | 
+            cd /pub/${{secrets.USERNAME}}
+            git clone https://github.com/MattBlodgettProjects/CMSC389T-Web-Template.git
